@@ -1,0 +1,49 @@
+{
+    "name": "sneakyx/motis-symfony-client",
+    "description": "Symfony integration for MOTIS: fluent route search, geocoding and caching on top of motis-php-client",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "keywords": ["symfony", "motis", "transit", "routing", "geocoding", "public-transport"],
+    "authors": [
+        {
+            "name": "André Scholz"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "psr/cache": "^2.0|^3.0",
+        "sneakyx/motis-php-client": "^0.1",
+        "symfony/config": "^7.4|^8.0",
+        "symfony/dependency-injection": "^7.4|^8.0",
+        "symfony/http-kernel": "^7.4|^8.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.5|^11.0",
+        "symfony/cache": "^7.4|^8.0",
+        "symfony/framework-bundle": "^7.4|^8.0"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/sneakyx/motis-php-client.git"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "Sneakyx\\MotisSymfonyClient\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Sneakyx\\MotisSymfonyClient\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    }
+}
